@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 public class WorkoutSet {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Min(1)

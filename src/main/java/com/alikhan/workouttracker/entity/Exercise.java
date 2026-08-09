@@ -16,8 +16,8 @@ import java.util.Set;
 @NoArgsConstructor
 public class Exercise {
 
-    @GeneratedValue
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Enumerated(EnumType.STRING)

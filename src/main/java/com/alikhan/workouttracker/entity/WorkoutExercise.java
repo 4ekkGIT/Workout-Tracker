@@ -16,7 +16,7 @@ import java.util.Set;
 public class WorkoutExercise {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(optional = false)
