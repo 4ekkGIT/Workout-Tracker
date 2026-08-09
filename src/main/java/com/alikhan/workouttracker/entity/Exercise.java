@@ -36,4 +36,7 @@ public class Exercise {
     @Enumerated(EnumType.STRING)
     @Column(name = "muscle_group", nullable = false)
     private Set<MuscleGroup> muscleGroups = new HashSet<>();
+
+    @OneToMany(mappedBy = "exercise")
+    private Set<WorkoutExercise> workoutExercises = new HashSet<>();
 }

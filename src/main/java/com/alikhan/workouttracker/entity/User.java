@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "users")
 @Getter
@@ -30,4 +33,7 @@ public class User {
         this.username = username;
         this.email = email;
     }
+
+    @OneToMany(mappedBy = "user")
+    private Set<Workout> workouts = new HashSet<>();
 }
